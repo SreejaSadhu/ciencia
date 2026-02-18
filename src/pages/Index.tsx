@@ -223,6 +223,167 @@ const HomePage = () => {
       </section>
 
       {/* 
+        PAST EVENTS - "TEMPORAL ARTIFACTS" 
+        Goal: Digital Archive / Classified Footage look
+      */}
+      <section className="relative z-10 py-32 border-t border-white/5 bg-background overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 md:px-12">
+
+          {/* Section Header */}
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+            <div className="relative">
+              <span className="font-tech text-xs text-primary mb-2 block tracking-[0.3em]">{`// SYSTEM_MEMORY`}</span>
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase text-white leading-[0.9]">
+                Past<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-white">Events</span>
+              </h2>
+              {/* Decorative line */}
+              <div className="absolute -left-6 top-2 bottom-2 w-1 bg-gradient-to-b from-primary via-transparent to-primary opacity-50 hidden md:block" />
+            </div>
+
+            <div className="mt-8 md:mt-0 max-w-sm text-right">
+              <p className="font-tech text-xs text-muted-foreground leading-relaxed mb-4">
+                RECOVERED DATA FRAGMENTS FROM PREVIOUS OPERATIONS.
+                INTEGRITY: PARTIAL. VISUAL DECRYPTION REQUIRED.
+              </p>
+              <div className="flex justify-end gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <div key={i} className={`w-2 h-2 ${i < 3 ? 'bg-primary' : 'bg-gray-800'}`} />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Cyber Grid Gallery */}
+          <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[120vh] md:h-[80vh]">
+
+            {/* ITEM 1: Large Feature */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="md:col-span-2 md:row-span-2 relative group overflow-hidden border border-white/10 bg-black/50"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop"
+                alt="Event 01"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
+
+              {/* Overlay Content */}
+              <div className="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <div className="flex justify-between items-end border-b border-white/20 pb-4 mb-4">
+                  <span className="font-pixel text-4xl text-white">01</span>
+                  <span className="font-tech text-xs text-primary tracking-widest">HACKATHON_V1.0</span>
+                </div>
+                <p className="font-body text-sm text-gray-400 max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                  Massive collaborative coding session involving 500+ participants.
+                </p>
+              </div>
+
+              {/* Corner Accents */}
+              <div className="absolute top-4 right-4 w-12 h-12 border-t-2 border-r-2 border-primary/30 group-hover:border-primary transition-colors" />
+            </motion.div>
+
+            {/* ITEM 2: Top Right */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="md:col-span-2 relative group overflow-hidden border border-white/10 bg-black/50"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
+                alt="Event 02"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+              />
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500" />
+
+              <div className="absolute top-0 right-0 p-6">
+                <div className="bg-black/80 backdrop-blur border border-white/10 px-3 py-1">
+                  <span className="font-mono text-xs text-primary">CYBER_SEC_WORKSHOP</span>
+                </div>
+              </div>
+
+              <div className="absolute bottom-6 left-6">
+                <h3 className="font-heading text-2xl text-white uppercase tracking-wider group-hover:text-primary transition-colors">Net.Guard</h3>
+              </div>
+            </motion.div>
+
+            {/* ITEM 3: Bottom Middle */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="relative group overflow-hidden border border-white/10 bg-black/50"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
+                alt="Event 03"
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-700"
+              />
+
+              {/* Scanline Effect */}
+              <div className="absolute inset-0 bg-[linear-gradient(transparent_2px,rgba(0,0,0,0.5)_2px)] bg-[size:100%_4px] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-16 h-16 border border-white/50 rounded-full flex items-center justify-center scale-0 group-hover:scale-100 transition-transform duration-300 backdrop-blur-sm">
+                  <span className="font-pixel text-xl text-white">VIEW</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* ITEM 4: Bottom Right */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="relative group overflow-hidden border border-white/10 bg-black/50 flex flex-col justify-between p-6"
+            >
+              <div className="absolute inset-0 bg-grid-thin opacity-20" />
+
+              <div>
+                <span className="font-tech text-4xl text-white/10 block mb-2">04</span>
+                <h3 className="font-heading text-xl text-white">ROBOTICS EXPO</h3>
+              </div>
+
+              <div className="relative h-32 mt-4 border border-white/20 bg-black/50 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop"
+                  alt="Robotics"
+                  className="w-full h-full object-cover transition-all duration-500"
+                />
+              </div>
+
+              <div className="mt-4 flex justify-between items-center text-xs font-mono text-muted-foreground">
+                <span>STATUS:</span>
+                <span className="text-green-400">ARCHIVED</span>
+              </div>
+            </motion.div>
+
+          </div>
+
+          {/* Footer Metadata */}
+          <div className="mt-8 flex justify-between items-center border-t border-white/10 pt-4">
+            <span className="font-tech text-xs text-white/30">TOTAL_RECORDS: 3,429</span>
+            <Link to="/gallery" className="group flex items-center gap-2 font-mono text-xs text-primary hover:text-white transition-colors">
+              <span>FULL_DATABASE_ACCESS</span>
+              <span className="group-hover:translate-x-1 transition-transform">{'->'}</span>
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 
         SPONSORS SECTION 
         Goal: Scrolling marquee, high-tech partner display
       */}
